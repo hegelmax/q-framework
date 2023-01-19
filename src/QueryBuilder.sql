@@ -11,9 +11,15 @@
 GO
 ;IF SCHEMA_ID('q') IS NULL EXEC('CREATE SCHEMA q')
 GO
-;IF DATABASE_PRINCIPAL_ID('SM_sys_All') IS NOT NULL BEGIN
-	;EXEC('GRANT EXECUTE ON SCHEMA::q TO [SM_sys_All]')
-	;EXEC('GRANT SELECT ON SCHEMA::q TO [SM_sys_All]')
+;DECLARE @strRole	SYSNAME = 'sys_All'
+;DECLARE @strQuery	NVARCHAR(MAX)
+
+;IF DATABASE_PRINCIPAL_ID(@strRole) IS NOT NULL BEGIN
+	;SET @strQuery = 'GRANT EXECUTE ON SCHEMA::q TO ['+@strRole+']'
+	;EXEC(@strQuery)
+	
+	;SET @strQuery = 'GRANT SELECT ON SCHEMA::q TO ['+@strRole+']'
+	;EXEC(@strQuery)
 ;END
 GO
 ;DECLARE @ver 		FLOAT	= 1.0

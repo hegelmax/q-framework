@@ -5,4 +5,4 @@
 ## Update date: 2023-01-18 15:00
 ## Version: 	   1.04
 ## Description: Framework for working with queries in dynamic SQL
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=hegelmax&repo=q-framework)](https://github.com/hegelmax/q-framework)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats)](https://github.com/hegelmax/q-framework)
